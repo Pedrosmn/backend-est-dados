@@ -98,3 +98,7 @@ def handle_generate_list():
         return jsonify({"error": "Invalid list type"}), 400
         
     return jsonify(result)
+
+@routes.route("/")
+def home():
+    return "API Flask está no ar! 🚀"
