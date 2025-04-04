@@ -102,3 +102,6 @@ def handle_generate_list():
 @routes.route("/")
 def home():
     return "API Flask está no ar! 🚀"
+@routes.route("/algorithms", methods=["GET"])
+def get_algorithms():
+    return jsonify(["Árvore Binária", "Hash Table", "Lista Ligada"])
