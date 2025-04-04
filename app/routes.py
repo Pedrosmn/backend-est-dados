@@ -103,5 +103,7 @@ def handle_generate_list():
 def home():
     return "API Flask está no ar! 🚀"
 @routes.route("/algorithms", methods=["GET"])
-def get_algorithms():
-    return jsonify(["Árvore Binária", "Hash Table", "Lista Ligada"])
+
+@app.route("/api/oi", methods=["GET"])
+def oi():
+    return {"message": "Olá do Flask no Render!"}, 200
