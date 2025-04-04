@@ -1,13 +1,12 @@
-import os
 from flask import Flask
 from flask_cors import CORS
 from app.routes import routes
 
 app = Flask(__name__)
-CORS(app)  # Habilita CORS para evitar bloqueios
+CORS(app)
 
-app.register_blueprint(routes)
+# Defina um prefixo "/api" para as rotas
+app.register_blueprint(routes, url_prefix="/api")
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))  # Usa a porta fornecida pelo Render
-    app.run(host="0.0.0.0", port=port, debug=True)  # Escuta em todas as interfaces
+    app.run(debug=True)
