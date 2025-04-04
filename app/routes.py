@@ -104,6 +104,6 @@ def home():
     return "API Flask está no ar! 🚀"
 @routes.route("/algorithms", methods=["GET"])
 
-@app.route("/api/oi", methods=["GET"])
+@routes.route("/api/oi", methods=["GET"])
 def oi():
     return {"message": "Olá do Flask no Render!"}, 200
